@@ -6,5 +6,5 @@ Group Members:
 Alex Kyle (AK)
 Eagle Li  ()
 Derrick Locquiao (DL)
-Vithushan canigetsomewater (vk)
+Vithushan Kanageswaran (VK)
 
