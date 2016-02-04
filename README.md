@@ -3,7 +3,8 @@ Assignment for 4850
 
 Group Members:
 
-Alex Kyle ()
+Alex Kyle (AK)
 Eagle Li  ()
-Derrick Ludicolo (DL)
-Vithushan canigetsomewater ()
+Derrick Locquiao (DL)
+Vithushan canigetsomewater (vk)
+
