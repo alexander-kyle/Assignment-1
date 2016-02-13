@@ -7,16 +7,23 @@
         <link rel="stylesheet" type="text/css" media="all" href="css/text.css" />
         <link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
         <link rel="stylesheet" type="text/css" media="all" href="css/lightbox.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="styles.css" />
     </head>
     <body>
         <div id="wrapper">
             <div id="header">
-                <span class="myhead">Simple fgff Image Gallery</span>
+                <span class="myhead"><h1>Battle Bots</h1></span>
                 <span class="mynav">
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="/portfolio">Portfolio</a></li>
                         <li><a href="/assembly">Assembly</a></li>
+                        <ul style="float:right;list-style-type:none;">
+
+                            <li><a >Login</a></li>
+                        </ul>
+
+
                     </ul>
                 </span>
             </div>
