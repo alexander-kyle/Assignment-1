@@ -3,7 +3,18 @@ Assignment for 4850
 
 Group Members:
 
-Alex Kyle ()
-Eagle Li  ()
-Derrick Ludicolo ()
-Vithushan canigetsomewater ()
+Alex Kyle (AK) 
+Eagle Li  (EL)  
+Derrick Locquiao (DL) 
+Vithushan Kanageswaran (VK)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Work Done
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+-master template
+-login
+-portfolio
+-homepage
+
+    
