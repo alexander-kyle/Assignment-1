@@ -6,5 +6,19 @@ class Players extends MY_Model {
         $this->_tablename ='players';
         $this->_keyField ='Player';
     }
+    
+    public function getAmountOfPeanuts() 
+    {
+        $query = $this->db->query(''
+               . 'SELECT p.Player, p.Peanuts, COUNT(c.Piece) as Equity '
+               . 'FROM players p '
+               . 'INNER JOIN collections c '
+               . 'ON p.Player = c.Player '
+               . 'GROUP BY p.Player '
+               . 'ORDER BY p.Player ASC;');
+                
+                return $query->result();
+        
+    }
 }
 
