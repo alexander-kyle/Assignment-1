@@ -8,7 +8,7 @@ class Collections extends MY_Model {
         $this->_keyField = 'Token';
     }
 
-    public function getPieceTypeCountForPlayer($player, $series, $part) {
+    public function getOwned($player, $series, $part) {
         $query = $this->db->query(''
                 . 'SELECT COUNT(Piece) as Count '
                 . 'FROM `collections` '

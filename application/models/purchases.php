@@ -12,7 +12,7 @@ class Purchases extends MY_Model2 {
     //Grabs the transaction history for the peeps on portfolio page
     //
     //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-    public function getRecentPurchasesForPlayer($player) {
+    public function getRecentsForPlayer($player) {
         $query = $this->db->query(''
                 . 'SELECT '
                 . 'CASE Trans '
