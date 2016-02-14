@@ -20,7 +20,9 @@
                         <li><a href="/assembly">Assembly</a></li>
                         <ul style="float:right;list-style-type:none;">
 
-                            <li><a >Login</a></li>
+                            <div>
+                                {login}
+                            </div>
                         </ul>
 
 
