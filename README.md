@@ -3,9 +3,18 @@ Assignment for 4850
 
 Group Members:
 
-Alex Kyle (AK) -base controller and master template
-Eagle Li  (EL) -Assembly 
-Derrick Locquiao (DL) -Portfolio
-Vithushan Kanageswaran (VK) -Homepage & Dashboard view
+Alex Kyle (AK) 
+Eagle Li  (EL)  
+Derrick Locquiao (DL) 
+Vithushan Kanageswaran (VK)
 
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Work Done
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
+-master template
+-login
+-portfolio
+-homepage
+
+    
