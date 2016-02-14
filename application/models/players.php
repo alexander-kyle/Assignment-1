@@ -20,5 +20,15 @@ class Players extends MY_Model {
                 return $query->result();
         
     }
+    public function getFirstPlayerName()
+    {
+        $query = $this->db->query(''
+                . 'SELECT Player '
+                . 'FROM `players` '
+                . 'ORDER BY Player ASC '
+                . 'LIMIT 1;');
+        
+        return $query->row()->Player;
+    }
 }
 
