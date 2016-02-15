@@ -16,8 +16,23 @@
             <option value="{legs}" >{Piece}</option>               
         {/collections3}
     </select>
-    <img src="data/{head}.jpeg">
+    <div>
+        <table>
+            <tr>
+                
+                <td><img src="../../data/thumb/{head}.jpeg"></td>
+                
+            </tr>
+            <tr>
+                <td><img src="../../data/thumb/{body}.jpeg"></td>
+            </tr>
+            <tr>
+                <td><img src="../../data/thumb/{legs}.jpeg"></td>
+            </tr>
+        </table>
+    
+    </div>
 </form>
-
+<button>Assemble</button>
 
 
