@@ -12,8 +12,10 @@ class Welcome extends Application {
 
         $this->data['game_players'] = $this->game_players();
         $this->data['game_summary'] = $this->game_summary();
-
+           
         $this->data['pagebody'] = 'welcome';
+        $this->Registration->_register();
+        $this->Registration->buy();
         $this->render();
     }
 
