@@ -1,54 +1,66 @@
 <?php
-
-//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-// Registers Us as an agent to the server 
-//
-//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-
-class Register extends CI_Model {
-
+/**
+ * core/MY_Model.php
+ *
+ * Generic domain model.
+ *
+ * Intended to model both a single domain entity as well as a table.
+ * This is consistent with CodeIgniter's interpretation of the Active Record
+ * pattern, even though some of the functions are at the table level
+ * while others are at the record level :-/
+ *
+ * Each such model is bound to a specific database table, using a designated
+ * key field as the associative array index internally.
+ */
+class Registration extends CI_Model {
     protected $register;
+    protected $buy;
     protected $token;
-
-//constructer
-
+    protected $buy_receipt;
+    protected $team;
+    protected $name;
+    protected $password;
+    protected $player;
+    // Constructor
     function __construct() {
         parent::__construct();
+        $this->buy='http://botcards.jlparry.com/buy';
         $this->register = 'http://botcards.jlparry.com/register';
+        $this->team = 'A11';
+        $this->name = 'TunnelSnakes';
+        $this->password = 'tuesday';
+        $this->player = 'Joe';
     }
-
-//regisster function
-
     function _register() {
-        $_POST['team'] = 'A11';
-        $_POST['name'] = 'TunnelSnakes';
-        $_POST['password'] = 'tuesday';
-
         $fields = array(
-            'team' => urlencode($_POST['team']),
-            'name' => urlencode($_POST['name']),
-            'password' => urlencode($_POST['password'])
+            'team' => $this->team,
+            'name' => $this->name,
+            'password' => $this->password
         );
-// put data in URL for the POST
-        foreach ($fields as $key => $value) {
-            $fields_string .= $key . '=' . $value . '&';
-        }
-        rtrim($fields_string, '&');
-//open connection
-        $ch = curl_init();
-//set the url, number of POST vars, POST data
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_POST, count($fields));
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);
-//execute post
-        $this->token = curl_exec($ch);
-//close connection
-        curl_close($ch);
+        $result = $this->curl->simple_post($this->register, $fields);
+        echo $result;
+        $this->token = (string) $result->token;
+        /*
+        $results = $this->send($fields);
+        $this->token = (string) $results->token;
+         * */
+         
     }
-
-// get token function 
+    // get token function 
     function get_token() {
         return $this->token;
     }
-
+    function buy() {
+        $fields = array(
+            'team' => $this->team,
+            'token' => '0e3b9ab53a55eee4e87b117073239fe9',
+            //'token' => $this->token,
+            'player' => $this->player
+        );
+        $result = $this->curl->simple_post($this->buy, $fields);
+        $this->buy_receipt = $result;
+        echo $result;
+        /*$results = $this->send($fields);
+        echo $results;*/
+    }
 }
