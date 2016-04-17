@@ -16,8 +16,10 @@ class GameData extends Application {
         $this->data['title'] = 'Game Data';
         $this->dadta['pagebody'] = 'gameData';
         
-       
-        print_r($this->test->get_player_recent_trans('', 3));
+        $this->Registration->_register();
+        for($i=0; $i < 5; $i++){
+            $this->register->buy();
+        }
                 $this->render();
     }
 }

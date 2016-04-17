@@ -38,8 +38,9 @@ class Registration extends CI_Model {
             'password' => $this->password
         );
         $result = $this->curl->simple_post($this->register, $fields);
-        echo $result;
-        $this->token = (string) $result->token;
+        $xml = simplexml_load_string($result);
+        echo $xml;
+        $this->token = (string) $xml->token;
         /*
         $results = $this->send($fields);
         $this->token = (string) $results->token;

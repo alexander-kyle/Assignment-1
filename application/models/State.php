@@ -40,7 +40,9 @@ Class State extends CI_Model{
         $xml = simplexml_load_string($file);
         return $xml;
     }
-    
+    function get_stateData(){
+        return $this->stateData;
+    }
     
     function get_round() {
         return $this->round;
