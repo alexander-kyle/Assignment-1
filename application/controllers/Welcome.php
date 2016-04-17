@@ -46,5 +46,25 @@ class Welcome extends Application {
 
         return $this->parser->parse('game_summary', $this->data, true);
     }
+    
+    private function create_player() {
+        $rows = array();
+        foreach ($this->Admin->insertInto() as $record) {
+            $rows[] = (array) $record;
+        }
+        $this->data['create'] = $rows;
 
+        return $this->parser->parse('create_Player', $this->data, true);
+    }
+
+    private function delete_player() {
+        $rows = array();
+        foreach ($this->Admin->dropPlayer() as $record) {
+            $rows[] = (array) $record;
+        }
+        $this->data['delete'] = $rows;
+
+        return $this->parser->parse('delete_Player', $this->data, true);
+    }
+    
 }
